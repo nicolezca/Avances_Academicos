@@ -1,0 +1,31 @@
+body{
+    height: 100vh;
+    overflow: hidden;
+}
+.container h1{
+    margin-bottom: 1rem;
+    font-size: 40px;
+}
+
+.container p{
+    margin: 10px 0;
+    font-size: 22px;
+    line-height: 30px;
+    width: 80%;
+}
+
+.ubicacion{
+    margin: 30px 0;
+}
+
+.ubicacion h2{
+    font-size: 25px;
+    margin-bottom: 15px;
+}
+
+.ubicacion iframe{
+    width: 90%;
+    height: 400px;
+    filter: grayscale(100%);
+    border-radius: 10px;
+}

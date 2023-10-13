@@ -1,0 +1,22 @@
+@import url(../../partials/reset.css);
+@import url(home.css);
+@import url(navBar.css);
+
+
+body{
+    display: flex;
+    background-image: url(../../assets/fondo_principal.jpg);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-attachment: fixed;
+    color: white;
+}
+
+.container {
+    width: 70%;
+    padding: 30px 20px;
+}
+
+.navbar{
+    width: 30%;
+}
