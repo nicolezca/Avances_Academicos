@@ -1,16 +1,92 @@
+<!-- este archivo sere el de inicio de sesion o pagina prinicpal del sitio 
+    hace referencia a la carpeta login donde estara almacenado css,js,etc
+-->
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="login/styles.css">
+    <link rel="shortcut icon" href="assets/logo_escuela.png" type="image/x-icon">
     <title>Home | Tecnica</title>
 </head>
+
 <body>
-    <nav class="leftBar" id="leftBar">
-        <div class="top-logo">
-            <img src="" alt="">
-            <h1>Tecnica n°1</h1>
+    <div class="container">
+        <div class="contentLeft">
+            <div class="title">
+                <h1>INICIO DE SESION</h1>
+                <span>
+                    Bienvenidos, directivos. Accede para gestionar el progreso académico de nuestra escuela
+                </span>
+            </div>
+            <div class="logp">
+                <img src="assets/logo_escuela.png" alt="logo_escuela">
+                <span>INDUSTRIAL N°1</span>
+            </div>
         </div>
-    </nav>
+        <div class="contentRight">
+            <div id="formLogin">
+                <form action="" method="post">
+                    <!-- input nombre -->
+                    <div class="content_input">
+                        <label for="nombre">Nombre</label>
+                        <input type="text" name="nombre" id="nombre" placeholder="Agustin" required autocomplete="off">
+                    </div>
+                    <!-- input correo -->
+                    <div class="content_input">
+                        <label for="correo">Correo</label>
+                        <input type="email" name="correo" id="correo" placeholder="tatilezcano03@gmail.com" required
+                            autocomplete="off">
+                    </div>
+                    <!-- input clave -->
+                    <div class="content_input">
+                        <label for="clave">Clave</label>
+                        <input type="password" name="clave" id="clave" placeholder="********" required
+                            autocomplete="off">
+                    </div>
+                    <!-- btn envío -->
+                    <button type="submit">Iniciar Sesión</button>
+                </form>
+                <p id="mostrarRegistro">¿No tienes cuenta? <span style="color: #6038FF;">Crear cuenta</span></p>
+            </div>
+
+            <!-- formulario de registro -->
+            <div id="formRegister">
+                <form action="" method="post">
+                    <!-- input nombre -->
+                    <div class="content_input">
+                        <label for="nombreIngreso">Nombre</label>
+                        <input type="text" name="nombreIngreso" id="nombreIngreso" placeholder="Agustin" required
+                            autocomplete="off">
+                    </div>
+                    <!-- input apellido -->
+                    <div class="content_input">
+                        <label for="apellidoIngreso">Apellido</label>
+                        <input type="text" name="apellidoIngreso" id="apellidoIngreso" placeholder="Lezcano" required
+                            autocomplete="off">
+                    </div>
+                    <!-- input correo -->
+                    <div class="content_input">
+                        <label for="correo">Correo</label>
+                        <input type="email" name="correoIngreso" id="correoIngreso"
+                            placeholder="tatilezcano03@gmail.com" required autocomplete="off">
+                    </div>
+                    <!-- input clave -->
+                    <div class="content_input">
+                        <label for="clave">Clave</label>
+                        <input type="password" name="claveIngreso" id="claveIngreso" placeholder="********" required
+                            autocomplete="off">
+                    </div>
+                    <!-- btn envío -->
+                    <button type="submit">Registrarse</button>
+                </form>
+                <p id="mostrarLogin">¿Ya tienes cuenta? <span style="color: #6038FF;">Iniciar Sesión</span></p>
+            </div>
+        </div>
+    </div>
+    <script src="login/main.js"></script>
 </body>
+
 </html>
