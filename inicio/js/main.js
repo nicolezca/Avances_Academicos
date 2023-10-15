@@ -1,30 +1,22 @@
 const cards = document.querySelectorAll('.cards');
+const contents = document.querySelectorAll('.content');
 
-cards.forEach(card => {
+cards.forEach((card, index) => {
     card.addEventListener('click', () => {
-        // Eliminar la clase "active" de todos los elementos
+        // Eliminar la clase "active" de todas las cards
         cards.forEach(c => {
             c.classList.remove('active');
         });
 
-        // Agregar la clase "active" al elemento clicado
+        // Agregar la clase "active" a la tarjeta clicada
         card.classList.add('active');
-    });
-});
 
-const content = document.getElementById('container');
-
-// Ocultar todos los contenidos excepto el primero
-content.children[0].style.display = 'block';
-
-cards.forEach((card, index) => {
-    card.addEventListener('click', () => {
         // Ocultar todos los contenidos
-        for (let i = 0; i < content.children.length; i++) {
-            content.children[i].style.display = 'none';
-        }
+        contents.forEach(content => {
+            content.style.display = 'none';
+        });
 
-        // Mostrar el contenido PHP correspondiente al hacer clic en la card
-        content.children[index].style.display = 'block';
+        // Mostrar el contenido correspondiente al hacer clic en la tarjeta
+        contents[index].style.display = 'block';
     });
 });
