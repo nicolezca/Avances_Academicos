@@ -25,9 +25,18 @@
     display: flex;
     align-items: center;
     cursor: pointer;
-    transition: color .3s ease-in;
 }
-.exit{
+.cards.active a{
+    color: #6038FF;
+}
+
+.cards a{
+    transition: color .3s ease-in;
+    text-decoration: none;
+    color: white;
+}
+
+.exit a{
     color: red;
 }
 .cards i{
@@ -35,10 +44,10 @@
     margin-right: 5px;
 }
 
-.cards:hover{
+.cards:hover a{
     color: #6038FF;
 }
-.exit:hover{
+
+.exit:hover a{
     color: red;
 }
-
