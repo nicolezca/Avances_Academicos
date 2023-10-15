@@ -7,17 +7,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="css/general.css">
     <title>home | Industrial</title>
 </head>
 <body>
     <!-- barra de navegacion incluida de partiels -->
-    
+    <?php include('../partials/navBar.php');?>
      <!-- contenedor principal -->
      <div class="container">
         <h1>ESCUELA SECUNDARIA TECNICA N°1</h1>
-        <P>La institución educativa "Escuela Tecnica Nº 1" es una escuela técnica urbana de gestión pública ubicada en el Municipio de Chascomus dependiente de la región educativa 17 de la Provincia de Buenos Aires.</P>
-        <P>Brinda servicios educativos de gestión estatal en la modalidad de educación común en el secundario técnico avalado por el Instituto Nacional de Educación Tecnológica (INET).</P>
+        <P>La institución es una escuela técnica urbana de gestión pública ubicada en el Municipio de Chascomus dependiente de la región educativa 17 de la Provincia de Buenos Aires.</P>
+        <P>Brinda servicios educativos de gestión estatal en la modalidad de educación común en el termino de secundario técnico avalado por el Instituto Nacional de Educación Tecnológica (INET).</P>
         
         <div class="ubicacion">
             <h2>UBICACION GEOGRAFICA</h2>
