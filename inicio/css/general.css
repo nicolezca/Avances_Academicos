@@ -16,6 +16,19 @@ body{
 .container {
     width: 85%;
     padding: 30px 20px;
+
+}
+
+.container div{
+    display: none;    
+}
+
+.container .active{
+    display: block;
+}
+
+.container #inicio .ubicacion{
+    display: block;
 }
 
 .navbar{
