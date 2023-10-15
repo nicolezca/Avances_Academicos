@@ -19,19 +19,19 @@
     
     <!-- contenedor principal -->
     <div class="container" id="container">
-        <div id="inicio">
+        <div id="inicio" class="content active">
             <?php include('../partials/inicio.php'); ?>
         </div>
-        <div id="profesores">
+        <div id="profesores" class="content">
             <?php include('../partials/profesores.php'); ?>
         </div>
-        <div id="materias">
+        <div id="materias" class="content">
             <?php include('../partials/materias.php'); ?>
         </div>
-        <div id="alumnos">
+        <div id="alumnos" class="content">
             <?php include('../partials/alumnos.php'); ?>
         </div>
-        <div id="curso">
+        <div id="curso" class="content">
             <?php include('../partials/curso.php'); ?>
         </div>
 
