@@ -1,0 +1,44 @@
+.navbar{
+    display: flex;
+    align-items:center;
+    flex-direction: column;
+    padding: 30px 0;
+}
+
+.navbar .logo {
+    margin-bottom: 100px;
+    align-items: center;
+}
+
+.logo img{
+    width: 30px;
+    height: 30px;
+    margin-right: 5px;
+}
+
+.logo span{
+    color: white;
+}
+
+.link .cards{
+    margin: 2rem 0;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    transition: color .3s ease-in;
+}
+.exit{
+    color: red;
+}
+.cards i{
+    font-size: 30px;
+    margin-right: 5px;
+}
+
+.cards:hover{
+    color: #6038FF;
+}
+.exit:hover{
+    color: red;
+}
+
