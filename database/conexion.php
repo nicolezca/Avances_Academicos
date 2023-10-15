@@ -1,6 +1,6 @@
 <?php
 $hostname = 'localhost';
-$database = 'olimpiadas';
+$database = 'eestn';
 $username = 'root'; 
 $password = '';
 
