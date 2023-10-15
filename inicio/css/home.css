@@ -24,8 +24,8 @@ body{
 }
 
 .ubicacion iframe{
-    width: 90%;
-    height: 400px;
+    width: 80%;
+    height: 380px;
     filter: grayscale(100%);
     border-radius: 10px;
 }
