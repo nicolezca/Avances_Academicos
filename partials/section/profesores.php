@@ -14,9 +14,18 @@ if ($result->num_rows > 0) {
     }
 }
 ?>
-<?php include('filter.php');?>
+<nav id="filterNav">
+    <div class="agregar">
+        <button id="verformulario2">+</button>
+    </div>
+    <div class="filtrar">
+        <i class='bx bx-filter-alt'></i>
+        <input type="search" name="filter" class="filter" placeholder="buscar nombre">
+        <button id="aplicarFiltro">Aplicar Filtro</button>
+    </div>
+</nav>
 <?php if (isset($identificaciones) && count($identificaciones) > 0) : ?>
-    <table id="tabla">
+    <table class="tabla">
         <thead>
             <tr> <!-- Abre una fila de encabezados -->
                 <th>Identificación</th>
@@ -43,14 +52,14 @@ if ($result->num_rows > 0) {
     </div>
 <?php endif; ?>
 
-<form action="" method="post" class="formulario">
-        <label for="nombre">Nombre del Docente:</label>
-        <input type="text" id="nombre" name="nombre" required autocomplete="off"><br><br>
+<form action="" method="post"  id="form-docente"  class="formulario">
+    <label for="nombre">Nombre del Docente:</label>
+    <input type="text" id="nombre" name="nombre" required autocomplete="off"><br><br>
 
-        <label for="apellido">Apellidos del Docente:</label>
-        <input type="text" id="apellido" name="apellido" required autocomplete="off"><br><br>
-        
-        <label for="correo">Correo del Docente:</label>
-        <input type="text" id="correo" name="correo" required autocomplete="off"><br><br>
-        <input type="submit" value="Agregar">
-    </form>
+    <label for="apellido">Apellidos del Docente:</label>
+    <input type="text" id="apellido" name="apellido" required autocomplete="off"><br><br>
+
+    <label for="correo">Correo del Docente:</label>
+    <input type="text" id="correo" name="correo" required autocomplete="off"><br><br>
+    <input type="submit" value="Agregar">
+</form>
