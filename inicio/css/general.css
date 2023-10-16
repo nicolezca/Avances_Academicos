@@ -19,9 +19,6 @@ body{
 
 }
 
-.container div{
-    display: none;    
-}
 
 .container .active{
     display: block;
