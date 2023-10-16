@@ -35,6 +35,8 @@
     transition: color .3s ease-in;
     text-decoration: none;
     color: white;
+    display: flex;
+    align-items: center;
 }
 
 .exit a{
