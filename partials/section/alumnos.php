@@ -61,7 +61,7 @@ if ($result->num_rows > 0) {
     </div>
 <?php endif; ?>
 
-<form action="" method="post" id="form-alumno" class="formulario">
+<form action="../../../avance_academico/database/subirAlumno.php" method="post" id="form-alumno" class="formulario">
     <label for="nombre">Nombre del Alumno:</label>
     <input type="text" id="nombre" name="nombre" required autocomplete="off"><br><br>
 
