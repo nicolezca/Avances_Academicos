@@ -14,7 +14,7 @@ if ($result->num_rows > 0) {
     }
 }
 ?>
-<?php include('filter.php');?>
+<?php include('../filter.php');?>
 <?php if (isset($identificaciones) && count($identificaciones) > 0) : ?>
     <table id="tabla">
         <thead>
