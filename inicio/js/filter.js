@@ -1,9 +1,9 @@
 document.addEventListener("DOMContentLoaded", function () {
 
     //Filtrado por nombre
-    const filterNombreSelect = document.getElementById("filter");
+    const filterNombreSelect = document.querySelector("filter");
     const aplicarFiltroButton = document.getElementById("aplicarFiltro");
-    const tablaResultado = document.getElementById("Tabla").getElementsByTagName('tbody')[0];
+    const tablaResultado = document.querySelector("Tabla").getElementsByTagName('tbody')[0];
 
     //funcion a la hora de hacer click se crea un evento
     aplicarFiltroButton.addEventListener("click", function () {
