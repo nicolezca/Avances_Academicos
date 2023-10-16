@@ -1,0 +1,42 @@
+.formulario{
+    display: block;
+    position: relative;
+    transition:all .5s ease-in;
+    padding: 20px;
+    top: 30%;
+    width: 400px;
+    background-color: rgba(255, 255, 255, 0.715);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}
+
+.formulario label{
+    font-family: monospace;
+    color: black;
+}
+
+.formulario input{
+    border: none;
+    border-bottom: 1px solid blue;
+    outline: none;
+    background-color: rgba(159, 159, 159, 0.038);
+    color: white;
+    padding: 5px 2px;
+}
+
+
+.formulario input[type="submit"]{
+    background-color: blue;
+    padding: 10px 15px;
+    border-radius:5px;
+    color: white;
+    border:none;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.122);
+    transition: all .3s ease-in;
+}
+
+.formulario input[type="submit"]:hover{
+    color: blue;
+    outline: 1px solid blue;
+    cursor: pointer;
+    background-color: white;
+}
