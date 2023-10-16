@@ -21,19 +21,19 @@ include('../database/conexion.php');
     <!-- contenedor principal -->
     <div class="container" id="container">
         <div id="inicio" class="content active">
-            <?php include('../partials/inicio.php'); ?>
+            <?php include('../partials/section/inicio.php'); ?>
         </div>
         <div id="profesores" class="content">
-            <?php include('../partials/profesores.php'); ?>
+            <?php include('../partials/section/profesores.php'); ?>
         </div>
         <div id="materias" class="content">
-            <?php include('../partials/materias.php'); ?>
+            <?php include('../partials/section/materias.php'); ?>
         </div>
         <div id="alumnos" class="content">
-            <?php include('../partials/alumnos.php'); ?>
+            <?php include('../partials/section/alumnos.php'); ?>
         </div>
         <div id="curso" class="content">
-            <?php include('../partials/curso.php'); ?>
+            <?php include('../partials/section/curso.php'); ?>
         </div>
 
     </div>
