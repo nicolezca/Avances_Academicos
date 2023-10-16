@@ -1,5 +1,6 @@
 <?php
-
+//conexion
+include('../database/conexion.php');
 ?>
 
 <!DOCTYPE html>
