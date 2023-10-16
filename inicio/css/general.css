@@ -35,3 +35,26 @@ body{
     width: 15%;
     background-color:#31313194;
 }
+
+table{
+    width: 90%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.122);
+    background-color: rgba(0, 0, 0, 0.276);
+}
+
+table thead tr th{
+    border-bottom: 1px solid blue;
+    padding: .5rem 0;
+}
+table thead tr #telefono{
+    width: 10rem;
+}
+
+table tbody tr td{
+    border-bottom: 1px solid rgba(0, 0, 0, 0.122);
+}
+table tbody tr td{
+    padding: 1rem;
+    text-align: center;
+
+}
