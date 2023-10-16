@@ -1,0 +1,58 @@
+#filterNav{
+    margin: 20px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+#filterNav .agregar{
+    margin-right: 1em;
+}
+.agregar button{
+    padding: 10px 15px;
+transition: all .3s ease-in;
+    background-color: blue;
+    color: white;
+    text-decoration: none;
+    border-radius: 10px;
+    border: none;
+}
+.agregar:hover button{
+    background-color: white;
+    color: blue;
+    outline: 1px solid blue;
+    cursor: pointer;
+}
+#filterNav .filtrar{
+    padding: 0 1rem;
+    display: flex;
+    gap: .5rem;
+    align-items: center;
+    color: blue;
+}
+.filtrar input{
+outline: none;
+border: none;
+border-bottom: 1px solid gray;
+padding: 5px 10px;
+color: white;
+background: rgba(159, 159, 159, 0.524);
+}
+
+.filtrar input::placeholder{
+    color: white;
+}
+
+.filtrar #aplicarFiltro{
+    padding: 10px 15px;
+    transition: all .3s ease-in;
+    background-color: blue;
+    color: white;
+    text-decoration: none;
+    border-radius: 10px;
+    border: none;   
+    cursor: pointer;
+}
+
+#aplicarFiltro:hover{
+    opacity: 70%;
+}
