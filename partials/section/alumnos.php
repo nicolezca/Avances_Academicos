@@ -1,23 +1,23 @@
-<?php 
-    $sql = 'SELECT * FROM alumno';
-    $result = $conn->query($sql);
-    
-    $alumnos = array(); // Creamos un arreglo para almacenar los datos de los alumnos
-    
-    if ($result->num_rows > 0) {
-        while ($row = $result->fetch_assoc()) {
-            $identificaciones[] = $row['id'];
-            $nombres[] = $row['nombre'];
-            $apellidos[] = $row['apellido'];
-            $telefonos[] = $row['telefono'];
-            $nacimientos[] = $row['nacimiento'];
-            $documentaciones[] = $row['dni'];
-            $correos[] = $row['correo'];
-        }
+<?php
+$sql = 'SELECT * FROM alumno';
+$result = $conn->query($sql);
+
+$alumnos = array(); // Creamos un arreglo para almacenar los datos de los alumnos
+
+if ($result->num_rows > 0) {
+    while ($row = $result->fetch_assoc()) {
+        $identificaciones[] = $row['id'];
+        $nombres[] = $row['nombre'];
+        $apellidos[] = $row['apellido'];
+        $telefonos[] = $row['telefono'];
+        $nacimientos[] = $row['nacimiento'];
+        $documentaciones[] = $row['dni'];
+        $correos[] = $row['correo'];
     }
+}
 
 ?>
-<?php include('../filter.php');?>
+<?php include('../filter.php'); ?>
 <?php if (isset($identificaciones) && count($identificaciones) > 0) : ?>
     <table id="tabla">
         <thead>
@@ -53,23 +53,22 @@
 <?php endif; ?>
 
 <form action="" method="post" id="formulario">
-        <label for="nombre">Nombre del Alumno:</label>
-        <input type="text" id="nombre" name="nombre" required autocomplete="off"><br><br>
+    <label for="nombre">Nombre del Alumno:</label>
+    <input type="text" id="nombre" name="nombre" required autocomplete="off"><br><br>
 
-        <label for="apellido">Apellidos del Alumno:</label>
-        <input type="text" id="apellido" name="apellido" required autocomplete="off"><br><br>
+    <label for="apellido">Apellidos del Alumno:</label>
+    <input type="text" id="apellido" name="apellido" required autocomplete="off"><br><br>
 
-        <label for="telefono">Telefono del Alumno:</label>
-        <input type="tel" id="telefono" name="telefono" required autocomplete="off"><br><br>
+    <label for="telefono">Telefono del Alumno:</label>
+    <input type="tel" id="telefono" name="telefono" required autocomplete="off"><br><br>
 
-        <label for="nacimiento">Nacimiento del Alumno:</label>
-        <input type="date" id="nacimiento" name="nacimiento" required autocomplete="off"><br><br>
+    <label for="nacimiento">Nacimiento del Alumno:</label>
+    <input type="date" id="nacimiento" name="nacimiento" required autocomplete="off"><br><br>
 
-        <label for="dni">Dni del Alumno:</label>
-        <input type="number" id="dni" name="dni" required autocomplete="off"><br><br>
-        
-        <label for="correo">Correo del Alumno:</label>
-        <input type="email" id="correo" name="correo" required autocomplete="off"><br><br>
-        <input type="submit" value="Agregar">
-    </form>
+    <label for="dni">Dni del Alumno:</label>
+    <input type="number" id="dni" name="dni" required autocomplete="off"><br><br>
 
+    <label for="correo">Correo del Alumno:</label>
+    <input type="email" id="correo" name="correo" required autocomplete="off"><br><br>
+    <input type="submit" value="Agregar">
+</form>
