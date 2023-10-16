@@ -3,6 +3,7 @@
 @import url(home.css);
 @import url(navBar.css);
 @import url(filter.css);
+@import url(forms.css);
 
 
 body{
@@ -17,6 +18,7 @@ body{
 .container {
     width: 85%;
     padding: 30px 20px;
+    position: relative;
 
 }
 
