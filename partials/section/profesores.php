@@ -43,7 +43,7 @@ if ($result->num_rows > 0) {
     </div>
 <?php endif; ?>
 
-<form action="" method="post" id="formulario">
+<form action="" method="post" class="formulario">
         <label for="nombre">Nombre del Docente:</label>
         <input type="text" id="nombre" name="nombre" required autocomplete="off"><br><br>
 
