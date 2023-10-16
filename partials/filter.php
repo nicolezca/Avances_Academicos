@@ -8,4 +8,3 @@
         <button id="aplicarFiltro">Aplicar Filtro</button>
     </div>
 </nav>
-<script src="../inicio/js/filter.js"></script>
