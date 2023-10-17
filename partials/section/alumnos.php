@@ -3,10 +3,9 @@ $sql = 'SELECT * FROM alumno';
 $result = $conn->query($sql);
 
 $alumnos = array(); // Creamos un arreglo para almacenar los datos de los alumnos
-
 if ($result->num_rows > 0) {
     while ($row = $result->fetch_assoc()) {
-        $identificaciones[] = $row['id'];
+        $idAlumno[] = $row['id'];
         $nombres[] = $row['nombre'];
         $apellidos[] = $row['apellido'];
         $telefonos[] = $row['telefono'];
@@ -15,7 +14,6 @@ if ($result->num_rows > 0) {
         $correos[] = $row['correo'];
     }
 }
-
 ?>
 <nav id="filterNav">
     <div class="agregar">
@@ -27,7 +25,7 @@ if ($result->num_rows > 0) {
         <button id="aplicarFiltro">Aplicar Filtro</button>
     </div>
 </nav>
-<?php if (isset($identificaciones) && count($identificaciones) > 0) : ?>
+<?php if (isset($idAlumno) && count($idAlumno) > 0) : ?>
     <table class="tabla">
         <thead>
             <tr> <!-- Abre una fila de encabezados -->
@@ -41,17 +39,18 @@ if ($result->num_rows > 0) {
             </tr>
         </thead>
         <tbody>
-            <?php foreach ($identificaciones as $key => $id) : ?>
+                <?php for($i =0; $i<count($idAlumno); $i++):?>
                 <tr>
-                    <td><?php echo $id; ?></td>
-                    <td><?php echo $nombres[$key]; ?></td>
-                    <td><?php echo $apellidos[$key]; ?></td>
-                    <td><?php echo $telefonos[$key]; ?></td>
-                    <td><?php echo $nacimientos[$key]; ?></td>
-                    <td><?php echo $documentaciones[$key]; ?></td>
-                    <td><?php echo $correos[$key]; ?></td>
+                    <td><?php echo $id[$i]; ?></td>
+                    <td><?php echo $nombres[$i]; ?></td>
+                    <td><?php echo $apellidos[$i]; ?></td>
+                    <td><?php echo $telefonos[$i]; ?></td>
+                    <td><?php echo $nacimientos[$i]; ?></td>
+                    <td><?php echo $documentaciones[$i]; ?></td>
+                    <td><?php echo $correos[$i]; ?></td>
                 </tr>
-            <?php endforeach; ?>
+               <?php endfor; 
+               ?> 
         </tbody>
     </table>
 <?php else : ?>
