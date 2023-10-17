@@ -7,7 +7,7 @@ $profesores = array(); // Creamos un arreglo para almacenar los datos de los pro
 
 if ($result->num_rows > 0) {
     while ($row = $result->fetch_assoc()) {
-        $identificaciones[] = $row['id'];
+        $idProfesores[] = $row['id'];
         $nombres[] = $row['nombre'];
         $apellidos[] = $row['apellido'];
         $correos[] = $row['correo'];
@@ -24,7 +24,7 @@ if ($result->num_rows > 0) {
         <button id="aplicarFiltro">Aplicar Filtro</button>
     </div>
 </nav>
-<?php if (isset($identificaciones) && count($identificaciones) > 0) : ?>
+<?php if (isset($idProfesores) && count($idProfesores) > 0) : ?>
     <table class="tabla">
         <thead>
             <tr> <!-- Abre una fila de encabezados -->
@@ -35,7 +35,7 @@ if ($result->num_rows > 0) {
             </tr>
         </thead>
         <tbody>
-            <?php foreach ($identificaciones as $key => $id) : ?>
+            <?php foreach ($idProfesores as $key => $id) : ?>
                 <tr>
                     <td><?php echo $id; ?></td>
                     <td><?php echo $nombres[$key]; ?></td>
