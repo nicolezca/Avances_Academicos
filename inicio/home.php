@@ -32,7 +32,7 @@ include('../database/conexion.php');
         <div id="alumnos" class="content">
             <?php include('../partials/section/alumnos.php'); ?>
         </div>
-        <div id="curso" class="content">
+        <div id="curso" class="content" style="max-height: 100%;overflow-x: auto;" >
             <?php include('../partials/section/curso.php'); ?>
         </div>
 
