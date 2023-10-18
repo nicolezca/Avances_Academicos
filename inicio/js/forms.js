@@ -1,28 +1,36 @@
 document.addEventListener("DOMContentLoaded", function () {
-
-    const btnform = document.getElementById("verformulario");
-    const formulario = document.getElementById("form-alumno");
-    const btnform2 = document.getElementById("verformulario2");
-    const formularioDocente = document.getElementById("form-docente")
-    formularioDocente.style.left="500%"    
-    formulario.style.left="500%";
-    
-    btnform.addEventListener("click", function () {
+    function toggleFormulario(formulario, boton) {
         if (formulario.style.left === "500%") {
             formulario.style.left = "60%";
         } else {
             formulario.style.left = "500%";
         }
+    }
+
+    const formularios = [
+        {
+            botonId: "verformulario",
+            formularioId: "form-alumno",
+        },
+        {
+            botonId: "verformulario2",
+            formularioId: "form-docente",
+        },
+        {
+            botonId: "verformulario3",
+            formularioId: "form-materias",
+        },
+        {
+            botonId: "verformulario4",
+            formularioId: "form-curso",
+        },
+    ];
+
+    formularios.forEach((element) => {
+        const formulario = document.getElementById(element.formularioId);
+        const boton = document.getElementById(element.botonId);
+
+        formulario.style.left = "500%";
+        boton.addEventListener("click", () => toggleFormulario(formulario, boton));
     });
-    
-
-
-    btnform2.addEventListener("click", function () {
-        if (formularioDocente.style.left === "500%") {
-            formularioDocente.style.left = "60%";
-        } else {
-            formularioDocente.style.left = "500%";
-        }
-    });
-
 });
