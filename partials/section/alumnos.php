@@ -41,7 +41,7 @@ if ($result->num_rows > 0) {
         <tbody>
                 <?php for($i =0; $i<count($idAlumno); $i++):?>
                 <tr>
-                    <td><?php echo $id[$i]; ?></td>
+                    <td><?php echo $idAlumno[$i]; ?></td>
                     <td><?php echo $nombres[$i]; ?></td>
                     <td><?php echo $apellidos[$i]; ?></td>
                     <td><?php echo $telefonos[$i]; ?></td>
