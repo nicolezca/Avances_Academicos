@@ -19,13 +19,8 @@ body{
     width: 85%;
     padding: 30px 20px;
     position: relative;
-
 }
 
-
-.container .active{
-    display: block;
-}
 
 .container #inicio .ubicacion{
     display: block;
@@ -36,24 +31,25 @@ body{
     background-color:#31313194;
 }
 
-table{
+.tabla{
     width: 90%;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.122);
-    background-color: rgba(0, 0, 0, 0.276);
+    background-color: rgba(0, 0, 0, 0.435);
+
 }
 
-table thead tr th{
+.tabla thead tr th{
     border-bottom: 1px solid blue;
     padding: .5rem 0;
 }
-table thead tr #telefono{
+.tabla thead tr #telefono{
     width: 10rem;
 }
 
-table tbody tr td{
+.tabla tbody tr td{
     border-bottom: 1px solid rgba(0, 0, 0, 0.122);
 }
-table tbody tr td{
+.tabla tbody tr td{
     padding: 1rem;
     text-align: center;
 
