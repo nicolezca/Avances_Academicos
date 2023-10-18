@@ -37,7 +37,7 @@
         <tbody>
                 <?php for($i =0; $i<count($idMaterias); $i++):?>
                 <tr>
-                    <td><?php echo $id[$i]; ?></td>
+                    <td><?php echo $idMaterias[$i]; ?></td>
                     <td><?php echo $nombre[$i]; ?></td>
                     <td><?php echo $idProfesor[$i]; ?></td>
                 </tr>
