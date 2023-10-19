@@ -17,10 +17,10 @@ body{
 
 .container {
     width: 85%;
+    height: 100vh;
     padding: 30px 20px;
     position: relative;
 }
-
 
 .container #inicio .ubicacion{
     display: block;
