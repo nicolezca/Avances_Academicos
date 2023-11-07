@@ -1,6 +1,8 @@
 <?php
 //conexion
 include('../database/conexion.php');
+
+session_start();
 ?>
 
 <!DOCTYPE html>
@@ -17,9 +19,9 @@ include('../database/conexion.php');
 <body>
     <!-- barra de navegacion incluida de partiels -->
     <?php include('../partials/navBar.php'); ?>
-
     <!-- contenedor principal -->
     <div class="container" id="container">
+    <?php include('../partials/sesionCerrar.php');?>
         <h1>ESCUELA SECUNDARIA TECNICA N°1</h1>
         <P>La institución es una escuela técnica urbana de gestión pública ubicada en el Municipio de Chascomus dependiente de la región educativa 17 de la Provincia de Buenos Aires.</P>
         <P>Brinda servicios educativos de gestión estatal en la modalidad de educación común en el termino de secundario técnico avalado por el Instituto Nacional de Educación Tecnológica (INET).</P>
@@ -30,7 +32,7 @@ include('../database/conexion.php');
         </div>
     </div>
 
-    <script src="js/main.js"></script>
+    <script src="js/card.js"></script>
     <script src="js/filter.js"></script>
     <script src="js/forms.js"></script>
 </body>
