@@ -1,5 +1,6 @@
 <?php
 include('../database/conexion.php');
+session_start();
 $sql = 'SELECT * FROM alumno';
 $result = $conn->query($sql);
 
@@ -33,6 +34,7 @@ if ($result->num_rows > 0) {
 
     <!-- contenedor principal -->
     <div class="container" id="container">
+        <?php include('../partials/sesionCerrar.php');?>
         <nav id="filterNav">
             <div class="agregar">
                 <button id="verformulario">+</button>
@@ -100,6 +102,7 @@ if ($result->num_rows > 0) {
         </form>
     </div>
 
+    <script src="../inicio/js/card.js"></script>
     <script src="../inicio/js/filter.js"></script>
     <script src="../inicio/js/forms.js"></script>
 </body>
