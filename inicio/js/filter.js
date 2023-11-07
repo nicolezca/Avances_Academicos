@@ -1,26 +1,21 @@
 document.addEventListener("DOMContentLoaded", function () {
-
     //Filtrado por nombre
-    const filterNombreSelect = document.querySelector("filter");
+    const filterNombreSelect = document.querySelector("input[name='filter']");
     const aplicarFiltroButton = document.getElementById("aplicarFiltro");
-    const tablaResultado = document.querySelector("Tabla").getElementsByTagName('tbody')[0];
+    const tablaResultado = document.querySelector(".tabla tbody");
 
-    //funcion a la hora de hacer click se crea un evento
     aplicarFiltroButton.addEventListener("click", function () {
         const nombre = filterNombreSelect.value.toLowerCase();
         filtrarTabla(nombre);
     });
-    //funcion de filtrado mediante una recorrigo por la tabla coincidiendo con la columna propuesta
-    function filtrarTabla( nombre) {
+    function filtrarTabla(nombre) {
         const filas = tablaResultado.getElementsByTagName("tr");
 
         for (let i = 0; i < filas.length; i++) {
             const fila = filas[i];
             const columnas = fila.getElementsByTagName("td");
-
             const nombreColumna = columnas[1].textContent.toLowerCase(); // Columna de nombre
-            //parametros si se cumple la funcion
-            if ((nombreColumna .includes(nombre) || nombre === "")) {
+            if (nombreColumna.includes(nombre) || nombre === "") {
                 fila.style.display = "table-row";
             } else {
                 fila.style.display = "none";
