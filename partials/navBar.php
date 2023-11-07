@@ -9,6 +9,6 @@
         <div class="cards"><a href="../section/materias.php"><i class='bx bx-book'></i>MATERIAS</a></div>
         <div class="cards"><a href="../section/alumnos.php"><i class='bx bx-group'></i>ALUMNOS</a></div>
         <div class="cards"><a href="../section/curso.php"><i class='bx bx-chalkboard'></i>CURSO</a></div>
-        <div class="cards exit"><a href="#"><i class='bx bx-door-open'></i>SALIR</a></div>
+        <div class="cards exit" id="verCardExit"><i class='bx bx-door-open'></i>SALIR</div>
     </nav>
 </div>
