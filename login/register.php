@@ -2,31 +2,29 @@
 
 include('../database/conexion.php');
 // Procesar registro
-if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["nombreingreso"]) &&  isset($_POST["apellidoIngreso"]) && isset($_POST["correoIngreso"])  && isset($_POST["claveIngreso"])
+if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["nombreIngreso"]) &&  isset($_POST["apellidoIngreso"]) && isset($_POST["correoIngreso"])  && isset($_POST["claveIngreso"])
 ) {
-    $nombre = $_POST["nombreingreso"];
+    $nombre = $_POST["nombreIngreso"];
     $apellido = $_POST["apellidoIngreso"];
     $correo = $_POST["correoIngreso"];
     $clave = $_POST["claveIngreso"];
 
     // Validar los campos de registro
-    if (empty($nombre) || empty($apellido)||empty($correo) || empty($calve)) {
+    if (empty($nombre) || empty($apellido)||empty($correo) || empty($clave)) {
         echo "Por favor, complete todos los campos.";
     } else {
         // Verificar si el nombre ya está registrado en la base de datos
-        $sql = "SELECT * FROM usuario WHERE nombre = '$nombre'";
+        $sql = "SELECT * FROM usuarios WHERE correo = '$correo'";
         $result = $conn->query($sql);
 
         if ($result->num_rows > 0) {
             echo "El nombre de usuario ya está registrado.";
         } else {
             // Insertar el nuevo usuario en la base de datos
-            $sql = "INSERT INTO usuario (nombre, contrasena, tipo) VALUES ('$nombre', '$clave', '$tipo')";
+            $sql = "INSERT INTO usuarios (nombre, apellido, correo, clave) VALUES ('$nombre', '$apellido', '$correo', '$clave')";
 
             if ($conn->query($sql) === TRUE) {
-                echo "Registro exitoso";
-                // Redireccionar a la página de inicio de sesión o a otra página de tu elección
-                header("Location: ../../inicio/inicio.php");
+                header("Location: ../inicio/home.php");
                 exit();
             } else {
                 echo "Error en el registro: " . $conn->error;
