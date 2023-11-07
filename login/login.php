@@ -16,6 +16,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["nombre"]) && isset($_P
         $result = $conn->query($sql);
 
         if ($result->num_rows  == 1) {
+            session_start();
+                $_SESSION["nombre"] = $nombre;
             header("Location: ../inicio/home.php");
             exit();
         } else {

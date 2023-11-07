@@ -24,6 +24,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["nombreIngreso"]) &&  i
             $sql = "INSERT INTO usuarios (nombre, apellido, correo, clave) VALUES ('$nombre', '$apellido', '$correo', '$clave')";
 
             if ($conn->query($sql) === TRUE) {
+                session_start();
+                $_SESSION["nombre"] = $nombre;
                 header("Location: ../inicio/home.php");
                 exit();
             } else {
