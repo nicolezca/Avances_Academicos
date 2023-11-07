@@ -1,5 +1,10 @@
 <?php
 session_start();
+if (!isset($_SESSION['nombre'])) {
+    header('Location: ../index.html');
+    exit();
+}
+
 include('../database/conexion.php');
 $sql = 'SELECT * FROM curso';
 $result = $conn->query($sql);

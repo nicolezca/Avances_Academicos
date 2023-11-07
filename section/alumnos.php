@@ -1,6 +1,12 @@
 <?php
-include('../database/conexion.php');
 session_start();
+if (!isset($_SESSION['nombre'])) {
+    header('Location: ../index.html');
+    exit();
+}
+
+
+include('../database/conexion.php');
 $sql = 'SELECT * FROM alumno';
 $result = $conn->query($sql);
 

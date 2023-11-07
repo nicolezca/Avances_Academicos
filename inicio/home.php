@@ -3,6 +3,10 @@
 include('../database/conexion.php');
 
 session_start();
+if (!isset($_SESSION['nombre'])) {
+    header('Location: ../index.html');
+    exit();
+}
 ?>
 
 <!DOCTYPE html>
