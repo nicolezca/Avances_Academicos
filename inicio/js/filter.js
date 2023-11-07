@@ -18,7 +18,7 @@ document.addEventListener("DOMContentLoaded", function () {
             const fila = filas[i];
             const columnas = fila.getElementsByTagName("td");
 
-            const nombreColumna = columnas[1].textContent.toLowerCase(); // Columna de matricula
+            const nombreColumna = columnas[1].textContent.toLowerCase(); // Columna de nombre
             //parametros si se cumple la funcion
             if ((nombreColumna .includes(nombre) || nombre === "")) {
                 fila.style.display = "table-row";
