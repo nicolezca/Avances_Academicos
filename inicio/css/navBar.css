@@ -27,9 +27,7 @@
     align-items: center;
     cursor: pointer;
 }
-.cards.active a{
-    color: #6038FF;
-}
+
 
 .cards a{
     transition: color .3s ease-in;
@@ -47,10 +45,6 @@
     margin-right: 5px;
 }
 
-.cards:hover a{
+.cards:not(.exit):hover a{
     color: #6038FF;
-}
-
-.exit:hover a{
-    color: red;
 }
