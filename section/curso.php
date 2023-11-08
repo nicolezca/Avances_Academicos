@@ -28,6 +28,25 @@ if ($result->num_rows > 0) {
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="../inicio/css/general.css">
     <title>home | Industrial</title>
+    <style>
+        #anchoVer{
+            width: 150px;
+        }
+        #MostarInfoSala input[type="submit"]{
+            background-color: blue;
+            color: white;
+            border: none;
+            outline: none;
+            padding: 10px 20px;
+            border-radius: 8px;
+            transition: all .3s ease-in-out;
+        }
+        #MostarInfoSala input[type="submit"]:hover{
+            color: blue;
+            background-color: white;
+        }
+
+    </style>
 </head>
 
 <body>
@@ -55,6 +74,7 @@ if ($result->num_rows > 0) {
                         <th>ID</th>
                         <th>año</th>
                         <th>division</th>
+                        <th id="anchoVer">Ver</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -63,6 +83,12 @@ if ($result->num_rows > 0) {
                             <td><?php echo $idCurso[$i]; ?></td>
                             <td><?php echo $años[$i]; ?></td>
                             <td><?php echo $divisiones[$i]; ?></td>
+                            <td>
+                                <form action="infoCurso" method="post" id="MostarInfoSala">
+                                    <input type="hidden" name="idSala" value="<?php echo $idCurso[$i]?> ">
+                                    <input type="submit" value="informacion del Curso">
+                                </form>
+                            </td>
                         </tr>
                     <?php endfor;
                     ?>
@@ -106,4 +132,4 @@ if ($result->num_rows > 0) {
     <script src="../inicio/js/forms.js"></script>
 </body>
 
-</html>
+</html> 
