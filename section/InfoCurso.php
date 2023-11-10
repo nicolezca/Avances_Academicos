@@ -2,7 +2,9 @@
 
 include('../database/conexion.php');
 
-
+//aca iria las consultar para ver los alumnos agregados al curso 
+//aca iria el preseptores del curso
+//aca iria el profesor del curso
 
 ?>
 <!DOCTYPE html>
@@ -31,13 +33,21 @@ include('../database/conexion.php');
                     <?php
                         echo 'aca ira el preceptor';
                     ?>
-                </span>
+                </span> 
             </div>
         </div>
-        <div class="tabla">
+        <?php if (isset() && count() > 0) : ?>
+            <div class="tabla">
             <!-- aca van los alumnos con ID,nombre-apellido, btn:subirNotas, btn:verNotas -->
-            
-        </div>
+
+            </div>
+            <?php else :?>
+            <!-- Mostrar un mensaje si no hay datos -->
+            <div class="mensaje" style="text-align: center;">
+                <p>No se han cargado ningún Alumno.</p>
+            </div>
+
+        <?php endif; ?>
     </main>
 </body>
 </html>
