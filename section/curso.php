@@ -84,7 +84,7 @@ if ($result->num_rows > 0) {
                             <td><?php echo $años[$i]; ?></td>
                             <td><?php echo $divisiones[$i]; ?></td>
                             <td>
-                                <form action="infoCurso" method="post" id="MostarInfoSala">
+                                <form action="../database/Cursoinfo.php" method="post" id="MostarInfoSala">
                                     <input type="hidden" name="idSala" value="<?php echo $idCurso[$i]?> ">
                                     <input type="submit" value="informacion del Curso">
                                 </form>
