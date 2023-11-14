@@ -13,7 +13,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $conn->close();
 
     // Puedes redirigir o realizar otras acciones después de la inserción
-    header('Location: ../section/infoCurso.php');
+    header('Location: ../section/CursoMateria.php');
     exit();
 }
 ?>
