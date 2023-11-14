@@ -13,7 +13,7 @@
         // Cierra la conexión a la base de datos
         $conn->close();
 
-        header('Location: ../section/infoCurso.php');
+        header('Location: ../section/CursoMateria.php');
         exit();
     }
 ?>
