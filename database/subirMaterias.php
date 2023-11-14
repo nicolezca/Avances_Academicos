@@ -2,25 +2,25 @@
 
 include('conexion.php');
 
-if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["nombre"]) && isset($_POST["profesor"])) {
+if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["nombre"])) {
     $nombre = $_POST["nombre"];
-    $profesor = $_POST["profesor"];
+    $CursoID = $_POST["idCurso"];
 
 
     // Validar los campos de registro
-    if (empty($nombre) || empty($profesor) ) {
+    if (empty($nombre) || empty($CursoID) ) {
         echo "Por favor, complete todos los campos.";
     } else {
         // Insertar el nuevo usuario en la base de datos
-        $sql = "INSERT INTO materia (nombre, idProfesor) VALUES ('$nombre', '$profesor')";
+        $sql = "INSERT INTO cursomateria(ID_Curso, materia) VALUES ('$CursoID', '$nombre')";
 
         if ($conn->query($sql) === TRUE) {
             echo "Registro exitoso";
-            header("Location:../inicio/home.php");
+            header("Location:../section/CursoMateria.php");
             exit();
         } else {
             echo "Error en el registro: " . $conn->error;
-            echo '<a href="../inicio/home.php">Volver a intentar</a>';
+            echo '<a href="../section/CursoMateria.php">Volver a intentar</a>';
         }
     }
 }
