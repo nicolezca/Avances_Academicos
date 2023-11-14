@@ -1,19 +1,22 @@
 <?php
 
 function obtenerNombresAlumnos($conn, $idCurso) {
-    $sql = "SELECT a.nombre, a.apellido FROM cursoalumno ca JOIN alumno a ON ca.ID_Alumno = a.id WHERE ca.ID_Curso = $idCurso";
+    $sql = "SELECT a.id, a.nombre, a.apellido FROM cursoalumno ca JOIN alumno a ON ca.ID_Alumno = a.id WHERE ca.ID_Curso = $idCurso";
     $result = $conn->query($sql);
 
-    $nombresAlumnos = array();
+    $alumnos = array();
 
     if ($result->num_rows > 0) {
         while ($row = $result->fetch_assoc()) {
-            $nombreAlumno = $row['nombre'] . ' ' . $row['apellido'];
-            $nombresAlumnos[] = $nombreAlumno;
+            $alumno = array(
+                'id' => $row['id'],
+                'nombre' => $row['nombre'] . ' ' . $row['apellido']
+            );
+            $alumnos[] = $alumno;
         }
     }
 
-    return $nombresAlumnos;
+    return $alumnos;
 }
 
 function obtenerNombrePreceptor($conn, $idCurso) {
