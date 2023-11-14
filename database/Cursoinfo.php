@@ -27,7 +27,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $_SESSION["año"] = $añoCurso;
             $_SESSION["division"] = $divisionCurso;
 
-            header('Location: ../section/infoCurso.php');
+            header('Location: ../section/CursoMateria.php');
             exit();
         } 
     } 
