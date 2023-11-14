@@ -22,7 +22,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["nombre"]) && isset($_P
             exit();
         } else {
             echo "El usuario no esta registrado Por favor verifique su informacion: " . $conn->error;
-            echo '<a href="../formulario.html">Volver a intentar</a>';
+            echo '<a href="../index.html">Volver a intentar</a>';
         }
     }
 }
