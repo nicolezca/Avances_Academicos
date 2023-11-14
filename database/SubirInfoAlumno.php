@@ -6,15 +6,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     include('conexion.php');
 
     // Inserta la información en la tabla Alumnos
-    $sql = "INSERT INTO cursoinfo (ID_Alumno,ID_Curso) VALUES ( $nombreAlumno , $CursoID)";
+    $sql = "INSERT INTO cursoalumno (ID_Alumno,ID_Curso) VALUES ( $nombreAlumno , $CursoID)";
     $resultado = $conn->query($sql);
 
-    $eliminar = "DELETE FROM cursoinfo";
-    $resultadoeliminar = $conn -> query($eliminar);
-
-
-    $actualizar = "UPDATE SET curosinfo ID_Alumno = '145'";
-    $resultadoActualizar = $conn -> query($actualizar);
     // Cierra la conexión a la base de datos
     $conn->close();
 
