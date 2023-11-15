@@ -20,31 +20,42 @@ function obtenerNombresAlumnos($conn, $idCurso) {
 }
 
 function obtenerNombrePreceptor($conn, $idCurso) {
-    $sql = "SELECT p.nombre, p.apellido FROM cursopersonal cp JOIN preceptores p ON cp.ID_Preceptor = p.id WHERE cp.ID_Curso = $idCurso";
+    $sql = "SELECT p.id, p.nombre, p.apellido FROM cursopersonal cp JOIN preceptores p ON cp.ID_Preceptor = p.id WHERE cp.ID_Curso = $idCurso";
     $result = $conn->query($sql);
 
-    $nombreCompletoPreceptor = '';
+    $preceptores = array();
 
     if ($result->num_rows > 0) {
-        $row = $result->fetch_assoc();
-        $nombreCompletoPreceptor = $row['nombre'] . ' ' . $row['apellido'];
+        while ($row = $result->fetch_assoc()) {
+            $preceptor = array(
+                "id"=> $row["id"],
+                "nombre"=> $row["nombre"] . ' ' . $row['apellido']
+            );
+            $preceptores[] = $preceptor;
+        }
     }
 
-    return $nombreCompletoPreceptor;
+    return $preceptores ;
 }
 
 function obtenerNombreProfesor($conn, $idCurso) {
-    $sql = "SELECT pr.nombre, pr.apellido FROM cursopersonal cp JOIN profesores pr ON cp.ID_Profesor = pr.id WHERE cp.ID_Curso = $idCurso";
+    $sql = "SELECT pr.id, pr.nombre, pr.apellido FROM cursopersonal cp JOIN profesores pr ON cp.ID_Profesor = pr.id WHERE cp.ID_Curso = $idCurso";
     $result = $conn->query($sql);
 
-    $nombreCompletoProfesor = '';
+    $profesores = array();
+
 
     if ($result->num_rows > 0) {
-        $row = $result->fetch_assoc();
-        $nombreCompletoProfesor = $row['nombre'] . ' ' . $row['apellido'];
+        while($row = $result->fetch_assoc()){
+            $profesor = array(
+                'id' => $row['id'],
+                'nombre'=> $row['nombre'] . ' '. $row['apellido']
+            );
+            $profesores[] = $profesor;
+        }
     }
 
-    return $nombreCompletoProfesor;
+    return $profesores;
 }
 
 ?>
