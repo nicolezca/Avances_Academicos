@@ -30,22 +30,22 @@ if ($result->num_rows > 0) {
     <link rel="stylesheet" href="../inicio/css/curso2.css">
     <link rel="stylesheet" href="../inicio/css/forms.css">
     <style>
-        .agregar button{
-    padding: 10px 30px;
-    border-radius: 10px;
-    border: none;
-    outline: 1px solid white;
-    background: none;
-    color: white;
-    transition: background .3s ease-in-out;
-    cursor: pointer;
-}
+        .agregar button {
+            padding: 10px 30px;
+            border-radius: 10px;
+            border: none;
+            outline: 1px solid white;
+            background: none;
+            color: white;
+            transition: background .3s ease-in-out;
+            cursor: pointer;
+        }
 
-.agregar button:hover {
-    background: blue;
-}
+        .agregar button:hover {
+            background: blue;
+        }
     </style>
-    <title>Materias de <?php echo $añoCurso, ' ', $divisionCursp?></title>
+    <title>Materias de <?php echo $añoCurso, ' ', $divisionCursp ?></title>
 </head>
 
 <body>
@@ -56,7 +56,7 @@ if ($result->num_rows > 0) {
             <span>INDUSTRIAL</span>
         </div>
         <nav>
-            <span><?php echo $añoCurso, ' ',$divisionCursp; ?></span>
+            <span><?php echo $añoCurso, ' ', $divisionCursp; ?></span>
         </nav>
     </header>
     <!-- content -->
@@ -65,35 +65,35 @@ if ($result->num_rows > 0) {
             <button id="verformulario">Agregar Materia</button>
             <a href="curso.php">Volver al Inicio</a>
         </div>
-       
+
         <!-- table -->
         <?php if (isset($materias) && count($materias) > 0) : ?>
             <div class="content-tabla">
-            <table class="tabla">
-                <thead>
-                    <tr>
-                        <th>ID</th>
-                        <th>Nombre de la Materia</th>
-                        <th>Informacion</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <?php $contadorMaterias = 1; ?>
-                    <?php for ($i = 0; $i < count($materias); $i++) : ?>
+                <table class="tabla">
+                    <thead>
                         <tr>
-                            <td><?php echo $contadorMaterias; ?></td>
-                            <td><?php echo $materias[$i]; ?></td>
-                            <td>
-                                <form action='infoCurso.php' method='post'>
-                                    <input type='hidden' name='materiaNombre' value='<?php echo  $materias[$i]; ?>'>
-                                    <input type='submit' value='visualizar'>
-                                </form>
-                            </td>
+                            <th>ID</th>
+                            <th>Nombre de la Materia</th>
+                            <th>Informacion</th>
                         </tr>
-                        <?php $contadorMaterias++; ?>
-                    <?php endfor; ?>
-                </tbody>
-            </table>
+                    </thead>
+                    <tbody>
+                        <?php $contadorMaterias = 1; ?>
+                        <?php for ($i = 0; $i < count($materias); $i++) : ?>
+                            <tr>
+                                <td><?php echo $contadorMaterias; ?></td>
+                                <td><?php echo $materias[$i]; ?></td>
+                                <td>
+                                    <form action='infoCurso.php' method='post'>
+                                        <input type='hidden' name='materiaNombre' value='<?php echo  $materias[$i]; ?>'>
+                                        <input type='submit' value='visualizar'>
+                                    </form>
+                                </td>
+                            </tr>
+                            <?php $contadorMaterias++; ?>
+                        <?php endfor; ?>
+                    </tbody>
+                </table>
             </div>
         <?php else : ?>
             <!-- Mostrar un mensaje si no hay datos -->
@@ -125,8 +125,8 @@ if ($result->num_rows > 0) {
             }
             ?>
         </select><br><br> -->
-        <input type="hidden" name="idCurso" value="<?php echo $idCurso?>">
-        <input type="submit" value="Agregar"> 
+        <input type="hidden" name="idCurso" value="<?php echo $idCurso ?>">
+        <input type="submit" value="Agregar">
     </form>
 
     <!-- script -->
@@ -138,14 +138,13 @@ if ($result->num_rows > 0) {
 
             Formulario.style.left = "500%";
             VerFormulario.addEventListener('click', () => {
-                if (Formulario.style.left === "500%") { 
+                if (Formulario.style.left === "500%") {
                     Formulario.style.left = "70%";
                 } else {
                     Formulario.style.left = "500%";
                 }
             })
         });
-        
     </script>
 </body>
 
