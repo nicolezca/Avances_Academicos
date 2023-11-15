@@ -117,7 +117,7 @@ header nav span{
     transition:  scale .3s ease-in;
 }
 .tabla tbody tr td form input[type="submit"]:hover{
-    scale: 1.1;
+   opacity: 70%;
 }
 .tabla tbody tr td button{
     padding: 10px 30px;
